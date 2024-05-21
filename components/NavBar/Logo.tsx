@@ -24,7 +24,7 @@ const NavLogo = () => {
       </div>
       <div className={cn("hidden lg:block",font.className)}>
         <p className='text-lg font-semibold'> XONNET</p>
-        <p className='text-xs text-muted-foreground'>Lets's XONNET</p>
+        <p className='text-xs text-muted-foreground'>Lets&rsquo;s XONNET</p>
       </div>
     </div>
   </Link>

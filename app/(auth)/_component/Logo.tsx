@@ -22,7 +22,7 @@ const Logo = () => {
         </div>
         <div className='flex flex-col items-center'>
             <p className={cn('text-xl font-semibold font.className')}>XONNET</p>
-            <p className={cn('text-sm text-muted-foreground font.className')}> Let's Xonnet</p>
+            <p className={cn('text-sm text-muted-foreground font.className')}> Let&rsquo;s Xonnet</p>
         </div>
     </div>
   )
