@@ -8,7 +8,7 @@ import { getLoginUser } from '@/lib/auth-service'
 import Following, { FollowingSkelton } from './Following'
 import {  getAllStreamData, getStreamByUserId } from '@/lib/stream-servic'
 
-const SideBar =  async (_id:string) => {
+const SideBar =  async () => {
 
   const loggedInUser = await getLoginUser();
 

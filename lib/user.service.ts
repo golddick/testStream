@@ -38,7 +38,7 @@ export const getUserDataById = async (_id: String) => {
 
     try {
         // Find the user by ID and populate the streamData field
-        const user = await User.findById(_id).populate('streamData');
+        const user = await User.findById(_id)
         
         return user;
     } catch (error) {

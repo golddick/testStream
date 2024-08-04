@@ -14,7 +14,7 @@ import { ChatHeaderSkeleton } from '../Chat/_component/ChatHeader'
 import StreamInfoCard from '../StreamInfoCard/StreamInfoCard'
 import AboutCard from './AboutCard/AboutCard'
 
-
+ 
 interface StreamPlayerProps {
     // user:{
     //   _id: string
@@ -43,10 +43,12 @@ const StreamPlayer = ({user, stream, isFollowing}: StreamPlayerProps) => {
     console.log('user',stream[0] )
 
 
-
+ 
     if (!token || !name || !identity ) {
       return <StreamPlayerSkeleton/>
     }
+    
+    console.log(token)
   return (
     <>
     {

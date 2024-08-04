@@ -40,54 +40,6 @@ export const isBlockedByUser = async (_id: string) => {
 
 
 
-// export const blockUser = async (_id: string) => {
-//     await connectToDatabase();
-//     try {
-//         const loggedInUser = await getLoginUser();
-
-//         if (!loggedInUser) {
-//             throw new Error("User not found");
-//         }
-
-//         const otherUser = await User.findById(_id);
-
-//         if (!otherUser) {
-//             throw new Error("User not found");
-//         }
-
-//         if (otherUser._id.toString() === loggedInUser._id) {
-//             throw new Error("You cannot block yourself");
-//         }
-
-//         // Check if the user is already blocked
-//         const existingBlock = await Blocked.findOne({
-//             blockerId: otherUser._id.toString(),
-//             blockedId: loggedInUser._id
-//         });
-
-//         if (existingBlock) {
-//             throw new Error("User is already blocked");
-//         }
-
-//      // Update the Blocking array for the logged-in user
-//      const updatedLoggedInUser = await User.findByIdAndUpdate(loggedInUser._id, { $addToSet: { Blocking: otherUser._id.toString() } }, { new: true });
-
-//      // Update the followers array for the other user
-//      const updatedOtherUser = await User.findByIdAndUpdate(otherUser._id.toString(), { $addToSet: { BlockedBy: loggedInUser._id } }, { new: true });
- 
-
-
-//         // Create a new block
-//         const block = await Blocked.create({ 
-//             blockerId: otherUser._id,
-//              blockedId: loggedInUser._id });
-//         return block;
-//     } catch (error) {
-//         console.error("Error occurred while blocking user:", error);
-//         throw error;
-//     }
-// };
-
 
 export const blockUser = async (_id: string) => {
     await connectToDatabase();

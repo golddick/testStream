@@ -9,7 +9,7 @@ import { Skeleton } from '@/components/ui/skeleton'
 
 const StreamResult = async  () => {
     const loggedInUser = await getLoginUser()
-const data = await getStreams(loggedInUser._id)
+const data = await getStreams(loggedInUser?._id)
 
   return (
     <div>
