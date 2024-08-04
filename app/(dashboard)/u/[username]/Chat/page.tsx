@@ -5,12 +5,8 @@ import React from 'react'
 import ToggleCard from './_component/ToggleCard'
 
 
-interface ChatProps{
-    _id:string
 
-}
-
-const page = async ({_id}: ChatProps) => {
+const page = async () => {
 
     const loggedInUser = await getLoginUser()
     const stream = await getStreamByUserId(loggedInUser._id)
